@@ -4,10 +4,10 @@ import numpy as np
 import joblib
 from sklearn.ensemble import RandomForestClassifier
 
-st.title("Credit Default Prediction App")
+st.title("Credit Card Default Prediction App")
 
 st.write("""
-### _Makes predictions on which customers are likely to **default** in the following month & whether the account should be considered for **credit counseling** or not._
+### _Predicts if a credit card holder is defaulter or not.
 """)
 
 st.sidebar.header('User Input Features')
@@ -18,7 +18,7 @@ def user_input_features():
         MARRIAGE = st.sidebar.selectbox('Marital Status',('Married' , 'Single' , 'Others'))
         AGE = st.sidebar.slider('Age', 21,79,20)
         PAY_1 = st.sidebar.slider('Previous Month Payment', -2.00,8.00,0.00)
-        LIMIT_BAL = st.sidebar.slider('Balance Limit', 10000.00,800000.00,0.00)
+        LIMIT_BAL = st.sidebar.slider('Limit', 10000.00,800000.00,0.00)
         BILL_AMT1 = st.sidebar.slider('Bill Amount 1', -165580.00,746814.00,0.00)
         BILL_AMT2 = st.sidebar.slider('Bill Amount 2', -165580.00,746814.00,0.00)
         BILL_AMT3 = st.sidebar.slider('Bill Amount 3', -165580.00,746814.00,0.00)
